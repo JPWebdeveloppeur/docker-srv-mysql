@@ -1,0 +1,35 @@
+# Pull base image
+FROM php:7.2.34-apache
+
+# Install + CLeanup
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
+\
+    &&  apt-get update \
+    &&  apt-get install -y --no-install-recommends \
+           php7.*-mysql php7.*-common php7.*-ftp php7.*-iconv php7.*-json locales apt-utils git libicu-dev g++ libpng-dev libxml2-dev libzip-dev libonig-dev libxslt-dev unzip unzip npm vim zsh \
+\
+    &&  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh \
+       &&  echo "en_US.UTF-8 UTF-8" > /etc/locale.gen  \
+       &&  echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen \
+       &&  locale-gen \
+\
+    &&  curl -sS https://getcomposer.org/installer | php -- \
+    &&  mv composer.phar /usr/local/bin/composer \
+    &&  npm install --global yarn \
+\
+    &&  curl -sS https://get.symfony.com/cli/installer | bash \
+    &&  mv /root/.symfony/bin/symfony /usr/local/bin \
+    &&  pecl install xdebug \
+    &&  docker-php-ext-enable xdebug \
+\
+    &&  docker-php-ext-configure intl \
+    &&  docker-php-ext-install \
+            calendar soap pdo pdo_mysql opcache intl zip dom mbstring gd xsl \
+\
+    &&  pecl install apcu && docker-php-ext-enable apcu\
+    && curl -fsSL https://deb.nodesource.com/setup_16.x | bash \
+    && apt-get install -y nodejs
+
+COPY  config/php.ini /usr/local/etc/php/
+# Define Workspace
+WORKDIR /var/www/

@@ -1,0 +1,5 @@
+# Dev files
+.idea/*
+/docker/db/bdd/*
+/docker/db/dump/*
+index.php

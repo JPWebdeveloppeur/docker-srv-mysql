@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: db_srv
+        restart: "no"
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./docker/db/bdd:/var/lib/mysql
+            - ./docker/dump/name_dump.sql:/docker-entrypoint-initdb.d/dump-namedump.sql
+        environment:
+            MYSQL_ROOT_PASSWORD: dbtest
+            MYSQL_DATABASE: dbtest
+            MYSQL_USER: dbtest
+            MYSQL_PASSWORD: dbtest
+        networks:
+            - dev
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: docker_srv_phpmyadmin
+        restart: "no"
+        environment:
+          PMA_HOST: mysql
+          MYSQL_ROOT_PASSWORD: dbtest
+        ports:
+            - 8181:80
+        links:
+            - mysql
+        networks:
+            - dev
+    php:
+        build: docker/php
+        expose:
+            - 9003
+        container_name: docker_srv_php_apache
+        ports:
+            - "8080:80"
+        volumes:
+          - ./docker/php/vhosts:/etc/apache2/sites-enabled
+          - ./:/var/www
+          - ./docker/php/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+          - ./docker/php/xdebug/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+        restart: "no"
+        networks:
+          - dev
+
+networks:
+    dev:
