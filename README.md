@@ -5,7 +5,7 @@ Il s'agit d'une image Docker qui vous permet d'avoir un environnement de dévelo
 Outre l'image de base Apache PHP 7.2, il comprend également les modules suivants:
 
 ```
-* apcu 			* mbstring 			* SimpleXML
+* apcu 		        * mbstring 			* SimpleXML
 * calendar 		* mysqlnd 			* soap
 * Core 			* libxml 			* sodium
 * ctype 		* openssl 			* SPL
