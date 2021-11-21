@@ -85,7 +85,10 @@ mysql -u user -p name_db < chemin ou se trouve le backup
     - /docker/php/vhosts # Contient le vhost.conf pour la config apache
 - /docker-compose.yml # Orchestrer vos conteneurs
 ```
-# Installez Xdebug 3 dans le conteneur PHP
+### Reload Projet Symfony 
+➔ Si votre projet existe, suivre cette [Procédure](README-procédure.md) pour la remise en route de votre application.
+
+### Installez Xdebug 3 dans le conteneur PHP
 ➔ [Procédure Xdebug ](README_xdebug.md)
 
 # Cmd Docker
