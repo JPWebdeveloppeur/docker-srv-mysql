@@ -34,15 +34,15 @@ Outre l'image de base Apache PHP 7.2, il comprend également les modules suivant
 ➔ Ouvrez un terminale type bash et placez-vous dans le répertoire ou se trouve le docker-compose puis saisir :
 
 ```
-docker-compose up -d ou docker-compose up --build
+ docker-compose up -d ou docker-compose up --build
 ```
 ➔ Pour accéder au shell dans un conteneur, il faut lancer la commande suivante :
 ```
-  docker exec -it container_name zsh 
+ docker exec -it container_name zsh 
 ```
 ➔ Lancer l'installation de symfony : 
 ```
-   composer create-project symfony/website-skeleton:"^4.4" my_project_name
+ composer create-project symfony/website-skeleton:"^4.4" my_project_name
 ```
 
 ➔ Voici l'url pour l'applicationweb :
@@ -67,11 +67,11 @@ docker-compose up -d ou docker-compose up --build
 
 ➔ Connexion bdd
 ```
-mysql -u user -p name_db 
+ mysql -u user -p name_db 
 ```
 ➔ Import bdd
 ```
-mysql -u user -p name_db < chemin ou se trouve le backup
+ mysql -u user -p name_db < chemin ou se trouve le backup
 ```
 
 
