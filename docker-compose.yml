@@ -32,6 +32,8 @@ services:
             - dev
     php:
         build: docker/php
+        extra_hosts:
+            - host.docker.internal:host-gateway
         expose:
             - "9003"
         container_name: docker_srv_php_apache

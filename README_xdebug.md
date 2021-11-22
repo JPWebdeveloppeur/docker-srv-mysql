@@ -5,7 +5,11 @@ Cela variera en fonction du client que vous utilisez. Pour mes besoins, j'utilis
 
 ![Screenshot](https://www.zupimages.net/up/21/45/1xvm.jpg)
 
+
 ➔ Ce sont les paramètres de débogage par défaut, que vous pouvez trouver sous Paramètres › PHP › Debug › Xdebug, utilisez les valeurs par défaut de Xdebug, que nous n'avons pas modifiées dans notre configuration.
+
+➔ Toujours dans les settings, pensez à mapper votre projet "File > settings > Php > Server ".
+
 
 ![Screenshot](https://i.imgur.com/2G8tvZU.png)
 
