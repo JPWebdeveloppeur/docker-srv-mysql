@@ -62,6 +62,7 @@ Outre l'image de base Apache PHP 7.2, il comprend également les modules suivant
 * MYSQL_DATABASE: `name_bdd_projet`
 * MYSQL_USER: `user`
 * MYSQL_PASSWORD: `password`
+* UPLOAD_LIMIT: `5000M`
 
 ➔ Un dump peut être placé dans le repertoire `docker/db/dump` pour la restore lorsque vous lancerez la création du conteneur. 
 
