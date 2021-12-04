@@ -5,22 +5,22 @@ Il s'agit d'une image Docker qui vous permet d'avoir un environnement de dévelo
 Outre l'image de base Apache PHP 7.2, il comprend également les modules suivants:
 
 ```
-* apcu 		* mbstring 		* SimpleXML
-* calendar 	* mysqlnd 		* soap
-* Core 		* libxml 		* sodium
-* ctype 	* openssl 		* SPL
-* curl 		* mysqlnd 		* sqlite3
-* date 		* openssl 		* SimpleXML
-* dom 		* pcre 		        * sodium
-* fileinfo 	* PDO 			* SPL
-* filter 	* pdo_mysql 		* standard
-* ftp 		* pdo_sqlite 		* tokenizer
-* gd 		* Phar 		        * xml
-* hash 		* posix 		* xmlreader
-* iconv 	* readline 		* xmlwriter
-* json 		* Reflection	        * xsl
-* libxml 	* Session		* Zend OPcache
-* zip		* zlib
+* apcu 	   * mbstring 	  * simpleXML
+* calendar 	   * mysqlnd          * soap
+* Core 	   * libxml 		  * sodium
+* ctype         * openssl          * spl
+* curl 	   * mysqlnd          * sqlite3
+* date          * pcre             * simplexml
+* dom           * pdo              * spl
+* fileinfo      * pdo_mysql        * tokenizer
+* filter        * standard         * xml
+* ftp           * pdo_sqlite       * xmlreader
+* gd            * phar             * xmlwriter
+* hash          * posix            * xsl
+* iconv         * readline         * Zend opcache
+* json          * Reflection
+* libxml        * Session
+* zip           * zlib
 ```
 
 **Note:**  Vous pouvez si vous souhaitez rajouter des extensions via le [Dockerfile](docker/php/dockerfile)
