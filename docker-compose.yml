@@ -43,7 +43,8 @@ services:
           - ./:/var/www
         restart: "no"
         networks:
-          - dev
+            dev:
+                ipv4_address: 192.152.0.0
 
 networks:
     dev:
