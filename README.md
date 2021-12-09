@@ -1,8 +1,8 @@
-# Docker environnement Php 7.2.34-apache for Symfony 4.4
+# Docker environnement Php 7.4.26-apache for Symfony 4.4
 
 Il s'agit d'une image Docker qui vous permet d'avoir un environnement de développement local avec PHP, MySQL et phpMyAdmin et d'utiliser la même image PHP dans votre application de production.
 
-Outre l'image de base Apache PHP 7.2, il comprend également les modules suivants:
+Outre l'image de base Apache PHP 7.4, il comprend également les modules suivants:
 
 ```
 * apcu 	   * mbstring 	  * simpleXML
