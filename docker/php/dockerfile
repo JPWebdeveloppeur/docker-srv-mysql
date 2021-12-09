@@ -1,5 +1,5 @@
 # Pull base image
-FROM php:7.2.34-apache
+FROM php:7.4.26-apache
 
 # Install + CLeanup
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
